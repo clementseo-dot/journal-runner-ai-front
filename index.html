@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Journal du Runner AI</title>
+
+  <meta
+    name="description"
+    content="Posez vos questions running à Journal du Runner AI."
+  >
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+</head>
+
+<body>
+
+  <main class="page">
+
+    <section class="hero">
+
+      <div class="badge">
+        JOURNAL DU RUNNER AI
+      </div>
+
+      <h1>
+        Votre coach running,
+        <span>alimenté par nos contenus.</span>
+      </h1>
+
+      <p class="intro">
+        Chaussures, équipement, entraînement,
+        nutrition : posez votre question.
+      </p>
+
+
+      <div class="search-card">
+
+        <textarea
+          id="question"
+          placeholder="Ex : Je prépare mon premier semi-marathon. Quelles chaussures choisir ?"
+          maxlength="1000"
+        ></textarea>
+
+        <button id="askButton">
+          <span id="buttonText">
+            Demander au Coach
+          </span>
+
+          <span class="arrow">
+            →
+          </span>
+        </button>
+
+      </div>
+
+
+      <div class="suggestions">
+
+        <button
+          class="suggestion"
+          data-question="Quelles chaussures choisir pour préparer mon premier semi-marathon ?"
+        >
+          👟 Choisir mes chaussures
+        </button>
+
+        <button
+          class="suggestion"
+          data-question="Comment préparer mon premier marathon ?"
+        >
+          🏁 Préparer une course
+        </button>
+
+        <button
+          class="suggestion"
+          data-question="Quelle montre GPS choisir pour courir ?"
+        >
+          ⌚ Choisir une montre
+        </button>
+
+        <button
+          class="suggestion"
+          data-question="Que manger avant une course ?"
+        >
+          🍌 Nutrition
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <section
+      id="loading"
+      class="loading hidden"
+    >
+
+      <div class="spinner"></div>
+
+      <p>
+        Le Coach consulte Journal d'un Runner...
+      </p>
+
+    </section>
+
+
+    <section
+      id="error"
+      class="error hidden"
+    ></section>
+
+
+    <section
+      id="result"
+      class="result hidden"
+    >
+
+      <div class="result-label">
+        RÉPONSE DU COACH
+      </div>
+
+      <div
+        id="answer"
+        class="answer"
+      ></div>
+
+
+      <div
+        id="sources"
+        class="sources hidden"
+      >
+
+        <div class="sources-title">
+          Pour aller plus loin
+        </div>
+
+        <div
+          id="sourcesList"
+          class="sources-grid"
+        ></div>
+
+      </div>
+
+    </section>
+
+
+    <footer>
+
+      <strong>
+        Journal d'un Runner
+      </strong>
+
+      <span>
+        L'IA peut faire des erreurs.
+        Vérifiez les informations importantes.
+      </span>
+
+    </footer>
+
+  </main>
+
+
+  <script src="app.js"></script>
+
+</body>
+</html>
